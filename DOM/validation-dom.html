@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Validation Password in DOM</title>
+<style>
+body {
+	margin-left: 250px;
+	margin-top: 0px;
+	background-color: #996633;
+}
+.logo {
+	height: 120px;
+	width: 800px;
+	background-color: blue;
+	text-align: center;
+	color: white;
+	font-size: 42px;
+	font-weight: bold;
+}
+.menu {
+	height: 30px;
+	width: 800px;
+	background-color: silver;
+}
+.container {
+	height: 450px;
+	width: 800px;
+	background-color: silver;
+}
+.footer {
+	height: 30px;
+	width: 800px;
+	background-color: blue;
+	color: white;
+	font-weight: bold;
+}
+.left {
+	height: 100%;
+	width: 70%;
+	background-color: gray;
+	float: left;
+}
+.right {
+	height: 100%;
+	width: 30%;
+	background-color: green;
+	float: left;
+}
+.leftupper {
+	width: 100%;
+	height: 50%;
+}
+.leftlower {
+	width: 100%;
+	height: 50%;
+	background-color: brown;
+}
+.col {
+	height: 90%;
+	width: 31%;
+	background: white;
+	float: left;
+	margin: 5px;
+	margin-top: 10px;
+	border-radius: 20px;
+	text-align: center;
+}
+.menuitem {
+	float: left;
+	height: 90%;
+	width: 23%;
+	margin: 5px;
+	background-color: white;
+	text-align: center;
+	border-radius: 10px;
+}
+.heading1 {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+.cl {
+	background-color: #0099FF;
+}
+.cl2 {
+	display: none;
+	color: #FF0000;
+	font-weight: bold;
+}
+.cl4 {
+	width: 800px;
+	background-color: #0099FF;
+	font-weight: bold;
+	font: "Courier New", Courier, monospace;
+	font-size: 36px;
+}
+.cl5 {
+	width: 800px;
+	background-color: #0099FF;
+	font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+function fun()
+{
+	if(document.getElementById("t1").value=="")
+	{
+		document.getElementById("s1").style.display="block";
+		document.getElementById("t1").focus();
+		return false;
+	}
+	else if(document.getElementById("p1").value=="")
+	{
+		document.getElementById("s1").style.display="none";
+		document.getElementById("s2").style.display="block";
+		return false;
+	}
+	else if(document.getElementById("p2").value=="")
+	{
+		document.getElementById("s3").style.display="block";
+		document.getElementById("s2").style.display="none";
+		return false;
+	}
+	else
+	{
+		document.getElementById("s3").style.display="none";
+		if(document.getElementById("p1").value==document.getElementById("p2").value)
+		{
+			alert("hi right password");
+		}
+		else
+		{
+			alert("Password Mismatch");
+			return false;
+		}
+	}
+}
+</script>
+</head>
+
+<body>
+<form method="get" action="#">
+  <h3>Rajesh Small Form</h3>
+  <table>
+    <tr>
+      <td> Enter User Name:</td>
+      <td><input type="text" id="t1" /></td>
+      <td><span class="cl2" id="s1">Enter User Name</span></td>
+    </tr>
+    <tr>
+      <td>Enter Password:</td>
+      <td><input type="password" id="p1" onfocus="fun()" /></td>
+      <td><span class="cl2" id="s2">Enter Pass</span></td>
+    </tr>
+    <tr>
+      <td> Retype:</td>
+      <td><input type="password" id="p2" onfocus="fun()" /></td>
+      <td><span class="cl2" id="s3">Retype</span></td>
+    </tr>
+  <tr>
+  <td>
+  <input type="submit" onclick="return fun()" value="submit" /></td>
+  <td><input type="reset" value="Reset" /></td>
+  <td></td></tr>
+  </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Objets Methods in Javascripts </title>
+<script>
+var rectangle= new Object();
+rectangle.length= 100;
+rectangle.width= 40;
+// A function is used in object property is called object methords
+rectangle.area= function(){
+	return this.length * this.width
+}
+document.writeln("Length of Rectangle:" + rectangle.length+"<br>");
+document.writeln("Width of Rectangle:" + rectangle.width+"<br>");
+document.writeln("Area of Rectangle:" + rectangle.area()+"<br>");
+
+// Another Methords in another way...
+var x= {
+	length:30, width:20, area:function(){// A function is used in object property is called object methords
+		return this.length * this.width
+		}
+	}
+	document.writeln("Length of x:" + x.length+"<br>");
+document.writeln("Width of x:" + x.width+"<br>");
+	document.writeln("Area of x:" + x.area()+"<br>");
+</script>
+</head>
+<body>
+</body>
+</html>

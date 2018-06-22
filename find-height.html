@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Find Height</title>
+<script>
+function myheight() {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    document.getElementById("demo").innerHTML = "<b>Width: " + w + "<br>Height:<b> " + h;
+	if(h<500) {
+		document.body.style.backgroundColor = "red";
+		alert("Height is Less than 500px");
+	}
+	else {
+		document.body.style.backgroundColor = "blue";
+		alert("Height is more than 500px");
+	}
+}
+</script>
+</head>
+
+<body onload="myheight()">
+<p id="demo"></p>
+</body>
+</html>

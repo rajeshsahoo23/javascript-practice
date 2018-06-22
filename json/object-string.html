@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object to string</title>
+<script>
+var object1 = '{"username":"Rajesh", "password":"rajesh@123"}';
+var string1  = JSON.parse(object1);
+document.write(string1.username + " " + string1.password + "<br>"); // Retrive all data
+var object = {username:"Rajesh", password:"rajesh@123"};
+var string  = JSON.stringify(object);
+document.write(string);
+</script>
+</head>
+
+<body>
+</body>
+</html>

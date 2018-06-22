@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Print the name Value</title>
+<script type="text/javascript">  
+// Alert Value of Text
+function printvalue(){  
+var name=document.form1.name.value;  
+alert("Welcome: "+name);  
+}  
+// Cube Root..........
+function getcube(){  
+var number=document.getElementById("number").value;  
+alert(number*number*number);  
+}  
+// Alert the Gender Value
+function totalelements()  
+{  
+var allgenders=document.getElementsByName("gender");  
+alert("Total Genders:"+allgenders.length);  
+}  
+</script> 
+</head>
+
+<body>
+ 
+  
+<form name="form1">  
+Enter Name:<input type="text" name="name"/>  
+<input type="button" onclick="printvalue()" value="print name"/>  
+</form>  
+<hr>
+<h2>Enter The Number for Cube</h2>
+<form>  
+Enter No:<input type="text" id="number" name="number"/><br/>  
+<input type="button" value="cube" onclick="getcube()"/>  
+</form>  
+<hr>
+<form>  
+Male:<input type="radio" name="gender" value="male">  
+Female:<input type="radio" name="gender" value="female">  
+  
+<input type="button" onclick="totalelements()" value="Total Genders">  
+</form>  
+</body>
+</html>

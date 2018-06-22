@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object Creation from Object</title>
+<script>
+var person = { // creating a object
+	ageCalc: function(){
+	console.log(" He is " + 2016-this.dob);
+}
+}
+
+var rajesh = Object.create(person);
+	rajesh.name="Rajesh";
+	rajesh.dob =1988;
+var ramesh = Object.create(person, {
+	name:{value:"Ramesh"},
+	dob:{value: 1988}
+});
+</script>
+</head>
+
+<body>
+</body>
+</html>

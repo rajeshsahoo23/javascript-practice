@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Template</title>
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+div {
+	box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<div id="mainContainer"></div>
+<script>
+		//DIV ID Value
+		var header = "headerContainer";
+		var banner ="bannerContainer";
+		var bodyCont = "bodyContainer";
+		var bodyinerContnr = "wrapper";
+		var smallCont = "sec";
+		var testimonial = "testContainer";
+		var footer = "footerContainer";
+		var innerID = "innerContainer";
+		var leftCont = "leftContainer";
+        var rightCont = "rightContainer";
+		
+		//Inner Height Width Value
+		var winHeight = window.innerHeight;
+		var mainContWidth = 1024;
+		var bodyinerContnrWidth = ((mainContWidth * 100) / 100) - 2;
+		//alert (bodyinerContnrWidth);
+		//var innerContainer = mainContWidth * 0.01;
+		var headerContHeight = (winHeight * 15) / 100;
+		var bodyContHeight = (winHeight * 75) / 100;
+		var footerContHeight = (winHeight * 10) / 100;
+
+		//var winWidth = window.innerWidth;
+		//var testimonialWidth = (mainContWidth * 70) / 100;
+
+		var leftContainer = (bodyinerContnrWidth * 50) / 100;
+		var rightContainer = (bodyinerContnrWidth * 50) / 100;
+		
+
+		// DIV Style Variable
+		var headerBg = "#1a92c7";
+		var bodyContBg = "#f7f7f7";
+		var body1ContBg = "#D7CCC8";
+		var leftContBg = "#FF7043";
+		var testContBg = "#ffffff";
+		var footerContBg = "#272727";
+		var padding = 20;
+		var auto = "auto";
+		var outerBorder = "1px solid #1a1a1a";
+		var leftbdr = "1px solid #1a1a1a";
+		var colorwhite ="#ffffff";
+		var centerAlign = "center";
+		var fLeft = "left";
+		
+		// Text Variables
+		var heading1 = "Welcome to CREST";
+		var heading2 = "Testimonial";
+		var paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut enim porta lacus ultrices pulvinar sit amet sit amet ligula. Cras dignissim tempor massa, ac dapibus est scelerisque ut. Nam non condimentum leo. Vestibulum eu ante hendrerit, fermentum urna in, commodo leo. Curabitur sit amet massa eget ipsum vulputate pretium. Ut et ipsum vestibulum, elementum tellus rhoncus, congue mauris. Mauris imperdiet, dolor accumsan maximus placerat, purus est posuere sapien, vel rutrum ligula elit non ligula. Nam dolor felis, interdum eget iaculis ut, dignissim tempus tellus. Praesent at porta diam.";
+		var testpara = "Curabitur sit amet massa eget ipsum vulputate pretium. Ut et ipsum vestibulum, elementum tellus rhoncus, congue mauris. Mauris imperdiet, dolor accumsan maximus placerat, purus est posuere sapien, vel rutrum ligula elit non ligula. Nam dolor felis, interdum eget iaculis ut, dignissim tempus tellus. Praesent at porta diam.";
+
+		/*document.getElementById('mainContainer').setAttribute("style", "height:"+winHeight+"px; border:"+outerBorder+"; width:"+mainContWidth+"px; margin:"+auto+";");
+		
+		document.getElementById('mainContainer').setAttribute("style", "height:"+winHeight+"px; background-color:"+bodyContBg+"; border:"+outerBorder+"; width:"+mainContWidth+"px; margin:"+auto+";");*/
+                
+		var winWidth = window.innerWidth;
+            if (winWidth >= 768) {
+                document.getElementById('mainContainer').setAttribute("style", "height:"+winHeight+"px; background-color:"+bodyContBg+"; border:"+outerBorder+"; width:"+mainContWidth+"px; margin:"+auto+";");
+
+                document.getElementById('mainContainer').innerHTML="<div id="+header+" style='height:"+headerContHeight+"px; background-color:"+headerBg+"; text-align:"+centerAlign+";'>HEADER</div><div id="+bodyCont+" style='height:"+bodyContHeight+"px; background-color:"+bodyContBg+";'><div id="+bodyinerContnr+" style='overflow:hidden;'><div id="+leftCont+" style='width:"+leftContainer+"px;background-color:"+leftContBg+"; padding:"+padding+"px; float:"+fLeft+"'><h1>"+heading1+"</h1><p>"+paragraph+"</p></div><div id="+rightCont+" style='width:"+rightContainer+"px; padding:"+padding+"px; float:"+fLeft+";'><div id="+smallCont+"style='float:"+fLeft+"'></div><div id="+smallCont+"></div><div id="+smallCont+"></div><div id="+smallCont+"></div></div></div></div><div id="+footer+" style='height:"+footerContHeight+"px; background-color:"+footerContBg+"; text-align:"+centerAlign+"; color:"+colorwhite+"; padding:"+padding+"px;'>FOOTER</div>";
+                
+            } else{  
+			document.getElementById('mainContainer').setAttribute("style", "height:"+winHeight+"px; background-color:"+body1ContBg+"; border:"+outerBorder+"; width:"+winWidth+"px; margin:"+auto+";");
+
+			document.getElementById('mainContainer').innerHTML="<div id="+header+" style='height:"+headerContHeight+"px; background-color:"+headerBg+"; text-align:"+centerAlign+";'>HEADER</div><div id="+bodyCont+" style='height:"+bodyContHeight+"px; background-color:"+bodyContBg+"; padding:"+padding+"px;'><h1>"+heading1+"</h1><p>"+paragraph+"</p></div><div id="+footer+" style='height:"+footerContHeight+"px; background-color:"+footerContBg+"; text-align:"+centerAlign+"; color:"+colorwhite+"; padding:"+padding+";'>FOOTER</div>";
+   			}
+   		
+
+		
+		/*document.getElementById('mainContainer').setAttribute("style", "height:"+winHeight+"px; border:"+outerBorder+"; width:"+mainContWidth+"px; margin:"+auto+";");
+		
+		document.getElementById('mainContainer').innerHTML ="<div id="+header+" style='height:"+headerContHeight+"px; background-color:"+headerBg+"; color:"+colorwhite+"; padding:"+padding+"; text-align:"+centerAlign+";'>HEADER</div><div id="+bodyCont+" style='height:"+bodyContHeight+"px; background-color:"+bodyContBg+"; padding:"+padding+"px;'><h1>"+heading1+"</h1><p>"+paragraph+"</p><br><div id="+testimonial+" style='width:"+testimonialWidth+"px; background-color:"+testContBg+"; border:"+outerBorder+"; margin:"+auto+"; padding:"+padding+"px;'><em>"+testpara+"</em></div></div><div id="+footer+" style='height:"+footerContHeight+"px; background-color:"+footerContBg+"; text-align:"+centerAlign+"; color:"+colorwhite+"; padding:"+padding+";'>FOOTER</div>";
+		//alert('mainContainer');*/
+		</script>
+</body>
+</html>

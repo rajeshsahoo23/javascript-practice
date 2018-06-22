@@ -1,0 +1,33 @@
+<html>
+ <head>
+  <script type="text/javascript">
+
+   function changeFunc() {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    alert(selectedValue);
+   }
+
+  </script>
+ </head>
+ <body>
+  <select id="selectBox" onchange="changeFunc();">
+   <option value="Rajesh">Option #1</option>
+   <option value="Raju">Option #2</option>
+  </select>
+  <br>
+  Alternate Way:
+  <script type="text/javascript">
+
+   function changeFunc1(i) {
+    alert(i);
+   }
+
+  </script>
+
+  <select id="SelectBox" onchange="changeFunc1(value);">
+   <option value="Rajesh">Option #1</option>
+   <option value="Ramesh">Option #2</option>
+  </select>
+ </body>
+</html>

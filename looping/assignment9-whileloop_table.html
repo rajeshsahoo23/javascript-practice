@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Template</title>
+</head>
+<body>
+<p id="demo"></p>
+<script type='text/javascript'>
+document.write("<h4>Multiplication Tables (i*j)</h4>");
+
+document.write("<table border=2 width=30% style='border-color:red; color:blue;'");
+	document.write("<table>");
+		var i=0,j=0;	
+		while (j <= 9) {
+			i=0;
+			j++;
+			document.write('<tr>');
+			while (i <= 49) {
+				i++
+				document.write('<td>',i*j,'</td>');
+			}
+	document.write('</tr>\n');	
+}
+
+document.write("</table>");
+document.write("</table>");
+/*
+document.write("<h4>Multiplication Tables (i x j = i*j)</h4>");
+	
+document.write("<table border=2 width=30% style='border-color:red; color:blue;'");
+document.write("<table >");
+		var i=0,j=0;	
+		while (j <= 9) {
+			i=0;
+			j++;
+			document.write('<tr>');
+			while (i <= 49) {
+				i++
+				document.write('<td>'+i+"x"+j+"=",i*j,'</td>');
+			}
+	document.write('</tr>\n');	
+}
+document.write("</table>");*/
+</script>
+</body>
+</html>

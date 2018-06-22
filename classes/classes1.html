@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Classes in Javascript</title>
+<script>
+var house = function(height, width){
+	this.height= height;
+	this.width= width;
+	this.area= function(){
+		return this.height* this.width;
+	}
+	this.perimeter= function(){
+	return	2*(this.height+this.width);
+	}
+};
+var myhome = new house(70,80);
+var Yourhome = new house(70,89);
+
+document.write(myhome.area()+"<br>");
+document.write(myhome.perimeter()+"<br>");
+document.write(Yourhome.area()+"<br>");
+document.write(Yourhome.perimeter()+"<br>");
+</script>
+</head>
+<body>
+</body>
+</html>

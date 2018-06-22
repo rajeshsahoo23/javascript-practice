@@ -1,0 +1,26 @@
+<html>
+<title>
+    Json File Retrive
+</title>
+
+<body>
+    <script>
+        var data = '{"name": "Rajesh Kumar Sahoo","age": 27,"address": {"streetAddress": "16th Main","city": "Bangalore"},"phoneNumber": [{"type": "home","number": "+91-9620975636"},{"type": "fax","number": "+91-9620975636"}]}';
+
+        var json = JSON.parse(data);
+
+        document.write(json["name"] + "<br>"); //mkyong
+        document.write(json.name + "<br>"); //mkyong
+
+        document.write(json.address.streetAddress + "<br>"); //16th Main
+        document.write(json["address"].city + "<br>"); //Bangalore
+        document.write(json.phoneNumber[0].type + "<br>"); //home
+        document.write(json.phoneNumber[0].number + "<br>"); //+91-9620975636
+        document.write(json.phoneNumber[1].type+ "<br>"); //fax
+        document.write(json.phoneNumber[1].number+ "<br>"); //+91-9620975636
+        document.write(json.phoneNumber.number + "<br>"); //undefined
+
+    </script>
+</body>
+
+</html>

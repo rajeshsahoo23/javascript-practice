@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Creating Object with Form</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input type="text" id="fName">
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input type="text" id="lName">
+                </td>
+            </tr>
+            <tr>
+                <td> Age:</td>
+                <td>
+                    <input type="text" id="age">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="text" id="gender">
+                </td>
+            </tr>
+            <tr>
+                <td>Profile:</td>
+                <td>
+                    <input type="text" id="profile">
+                </td>
+            </tr>
+            <tr>
+                <td>Company:</td>
+                <td>
+                    <input type="text" id="company">
+                </td>
+            </tr>
+            <tr>
+                <td>Skill:</td>
+                <td>
+                    <textarea id="skill" cols="22%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>
+                    <textarea id="address" cols="22%"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Pincode:</td>
+                <td>
+                    <input type="text" id="pincode">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var personDetails = {};
+        personDetails = {
+            "fName": "Rajesh Kumar",
+            "lName": "Sahoo",
+            "age": "27",
+            "gender": "Male",
+            "profile": "UI Developer",
+            "company": "PurpleFront Technologies",
+            "skill": "HTML, CSS, JavaScript, JQuery, Bootstrap",
+            "address": "BTM Layout, Bangalore",
+            "pincode": "560076"
+        };
+        var fname = document.getElementById("fName");
+        fname.value = personDetails.fName;
+        var lname = document.getElementById("lName");
+        lname.value = personDetails.lName;
+        var age = document.getElementById("age");
+        age.value = personDetails.age;
+        var gender = document.getElementById("gender");
+        gender.value = personDetails.gender;
+        var profile = document.getElementById("profile");
+        profile.value = personDetails.profile;
+        var company = document.getElementById("company");
+        company.value = personDetails.company;
+        var skill = document.getElementById("skill");
+        skill.value = personDetails.skill;
+        var address = document.getElementById("address");
+        address.value = personDetails.address;
+        var pincode = document.getElementById("pincode");
+        pincode.value = personDetails.pincode;
+
+    </script>
+</body>
+
+</html>

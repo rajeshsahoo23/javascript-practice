@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic Navigation</title>
+</head>
+<body>
+	
+	<div id="demo"></div>
+	<script type='text/javascript'>
+	var menu=["Home", "About us", "Services", "Contact us"];
+	var nav="";
+ 	for(i=0; i < menu.length;  i++){
+ 		nav +="<li style='display:inline-block;'>" + menu[i]+"</li> ";
+ 	}
+ 	/*Loop Body*/
+	document.getElementById("demo").innerHTML="<ul>" + nav +"</ul>";
+	
+	</script>
+</body>
+</html>

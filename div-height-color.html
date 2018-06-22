@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>background</title>
+<style>
+div{
+	color:#fff;
+	text-align:center;
+	border-bottom:1px solid #000;
+	}
+</style>
+</head>
+
+<body>
+<div id='header'>HEADER</div>
+
+<div id='main'>MAIN BODY</div>
+
+<div id='footer'>FOOTER</div>
+
+<script type="text/javascript">
+		var winHeight = window.innerHeight;
+		var A = winHeight * (15 / 100);
+		alert(A);
+		var B = winHeight * (75 / 100);
+		alert(B);
+		var C = winHeight * (10 / 100);
+		alert(C);
+		
+			document.getElementById("header").style.backgroundColor = "#00F";
+			document.getElementById("header").style.height = A + 'px';
+			
+			document.getElementById("main").style.backgroundColor = "#F00";
+			document.getElementById("main").style.height = B + 'px';
+		
+		
+			document.getElementById("footer").style.backgroundColor = "#000";
+			document.getElementById("footer").style.height = C + 'px';
+</script>
+
+</body>
+</html>

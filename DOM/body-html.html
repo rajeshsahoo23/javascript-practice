@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Body Inner HTML Taglines</title>
+</head>
+<body>
+<p>Rajesh Is a Javascript Developer</p>
+<p>
+<a href="/html/default.asp">HTML</a> | <a href="/css/default.asp">CSS</a>| <a href="/css/default.asp">PHP</a>
+</p>
+<p id="demo"></p>
+<p id="text"></p>
+<br>
+<img id="image" src="" width="160" height="120">
+<script type="text/javascript">
+alert(document.body.innerHTML);
+alert(document.documentElement.innerHTML);
+document.getElementById("demo").innerHTML =
+"Number of links: " + document.links.length;
+document.getElementById("text").innerHTML =
+"The title of this document is: " + document.title;
+document.getElementById("image").src = "../images/landscape.jpg";
+</script>
+</body>
+</html>

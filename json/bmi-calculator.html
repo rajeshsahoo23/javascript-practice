@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BMI Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style rel="stylesheet">
+  .jumbotron {
+  margin-top:100px;
+  }
+  </style>
+  <script>
+  function bmiCalc(){
+  var height = document.getElementById("height").value;
+  var weight = document.getElementById("weight").value;
+  if (height%1>=0 && weight%1>=0) {
+   var httpRequest= new XMLHttpRequest(); // Make a new XML HTTP Request
+  var url = "http://rajeshkumarsahoo.in/javascript-practice/json/bmi-calc.php" // Url rquired
+  httpRequest.open("POST", url, true); // post process with link with syncronext true
+  httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); // Required for post method
+    httpRequest.send("hgt="+ height + "&wgt="+ weight); // request sending process end
+   httpRequest.onreadystatechange = function(){  // check the ready state and status
+   if (httpRequest.readyState == 4 && httpRequest.status == 200)
+         {
+ var resultOut = httpRequest.responseText; // response as text
+ console.log(resultOut);
+ var resultData=JSON.parse(resultOut); // data parse or retrive data process
+ var bmiNum = (resultData.BMI);
+ var bmiMsg = (resultData.Message);
+ alert( bmiNum + ", "+ bmiMsg);
+ }
+ }
+  } else {
+ alert("Input only Numbers");
+  }
+  }
+  </script>
+</head>
+<body>
+
+<div class="container">
+<div class="jumbotron">
+  <h2 class="text-center">BMI Calculator</h2>
+  <hr>
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2">Height:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Enter Your Height in Centimeter" id="height" name="hgt">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Weight:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" placeholder="Enter Your Weight in Kilogram" id="weight" name="wgt">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary" id="btnCalc" onclick="bmiCalc()">Calculate BMI</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p id="result"></p>
+  <div class="clearfix"></div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

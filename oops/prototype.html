@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Prototype</title>
+</head>
+
+<body>
+<script>
+var person= function (name,age,email) { // creating  constructor is an instance of class
+this.name= name;
+this.age= age;
+this.email= email;
+this.getw= function(){// A function is used in object property is called object methords
+	return this.name+" is "+ this.age+" years old and He had "+ this.email;
+}
+}
+
+person.prototype.ageCalc= function(){
+	return 2018-this.age;
+}
+person.prototype.job= "Software Developer";
+var rajesh = new person("Rajesh",30,"rajeshkumarsahoo23@yahoo.com"); // created a instance
+	console.log(rajesh.getw());
+	console.log(rajesh.ageCalc());
+	console.log(rajesh.job);
+var ramesh = new person("Ramesh",29,"rameshkumarsahoo23@yahoo.com");
+	console.log(ramesh.getw());
+	console.log(ramesh.ageCalc());
+	console.log(ramesh.job);
+</script>
+</body>
+</html>

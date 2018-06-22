@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+   var x= document.getElementById("myText").value;
+   alert(x);
+}
+function myFunction2() {
+    var x = document.getElementById("myText1").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</head>
+<body>
+
+Name: <input type="text" id="myText" value="">
+<button onclick="myFunction()">Try it</button>
+<br>
+<br>
+<hr>
+First Name: <input type="text" id="myText1" value="">
+
+<p>Click the button to display the value of the value attribute of the text field.</p>
+
+<button onclick="myFunction2()">Try it</button>
+
+<p id="demo"></p>
+
+</body>
+</html>

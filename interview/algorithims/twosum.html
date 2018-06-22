@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Two Sum</title>
+<script>
+function twoSum(totalArray,sum){
+var pair=[];
+var hashTable=[];
+for(var i=0;i<totalArray.length;i++){
+var currentNumber = totalArray[i];
+var counterpart= sum-currentNumber;
+if(hashTable.indexOf(counterpart)!== -1) { // if its sets the totalcounter or exist
+pair.push([currentNumber, counterpart ]);
+}
+hashTable.push(currentNumber);
+}
+return console.log(pair);
+}
+twoSum([1,6,4,5,3,3,2,5],7);
+</script>
+</head>
+
+<body>
+</body>
+</html>

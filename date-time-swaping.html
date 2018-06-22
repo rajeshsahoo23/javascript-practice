@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Click the button to display todays day of the week and Swaping Number</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+function myFunction() {
+    var day = new Date();
+    var weekday = new Array();
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    
+    var months = new Array();
+    months[0] = "Jan";
+    months[1] = "Feb";
+    months[2] = "March";
+    months[3] = "April";
+    months[4] = "May";
+    months[5] = "June";
+    months[6] = "July";
+    months[7] = "Aug";
+    months[8] = "Sept";
+    months[9] = "Oct";
+
+    var days = weekday[day.getDay()];
+    var date =day.getDate();
+     var month =months[day.getMonth()];
+      var year = day.getFullYear();
+    document.getElementById("demo").innerHTML = days;
+     document.getElementById("demo1").innerHTML = date;
+      document.getElementById("demo2").innerHTML = month;
+      document.getElementById("demo3").innerHTML = year;
+      document.getElementById("demo4").innerHTML = days+"&nbsp/"+ date+"&nbsp/"+ month +"&nbsp/"+ year;
+}
+
+/*--Swaping --*/
+var x=15;
+var y=20;
+var a=x;
+x=y;
+y=a;
+document.write("Swaping Number Previous x=15,y=20<br>");
+document.write("x="+x+"<br>");
+document.write("y="+y);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic Navigation</title>
+</head>
+<body>
+	
+	<div id="foodMenu"></div>
+	 <script>
+        var foodItem = ["VegPlate", "NonVegPlate", "VegStrater", "NonVegStrater", "Combo"];
+        var price = ["Rs 40", "Rs 30", "Rs 50", "Rs 120", "Rs 250"];
+
+        document.write("<h2>Food Menu</h2>");
+        document.write("<table border='1'>");
+        for (var i = 0; i < foodItem.length; i++) {
+            document.write('<tr><td>' + foodItem[i] + '</td>');
+            document.write('<td>' + price[i] + '</td></tr>');
+        }
+        document.write('</table>');
+
+    </script>
+</body>
+</html>

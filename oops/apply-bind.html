@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Call , Apply, bind</title>
+</head>
+
+<body>
+<script>
+var num = {
+	num:6
+}
+var rajesh={
+	name:'Rajesh',
+	age:29,
+	email:'rajesh@gmail.com'
+}
+var ramesh={
+	name:'Ramesh',
+	age:28,
+	email:'ramesh@gmail.com'
+}
+var person= function(){// A function is used in object property is called object methords
+	return this.name+" is "+ this.age+" years old and He had "+ this.email;
+}
+var add=function(b){
+	return this.num+b;
+}
+var personX = {
+    fullName: function(city, country) {
+        return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+}
+var person1 = {
+    firstName:"John",
+    lastName: "Doe",
+}
+var x = personX.fullName.apply(person1, ["Bangalore", "India"]); // Use array as argument
+console.log(person.call(rajesh));
+console.log(person.call(ramesh));
+console.log(person.apply(rajesh));// Apply is similar to call but takes array also
+console.log(add.call(num,89));
+console.log(x);
+	var xz= personX.fullName.bind(person1,'bangalore')('India');
+	console.log(xz);
+</script>
+</body>
+</html>

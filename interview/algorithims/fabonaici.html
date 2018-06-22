@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fibonacci first + second = result</title>
+<script>
+var f=0;
+var s=1;
+var result=s;
+for(var i=0; i<10;i++){
+result=f+s;
+f=s;
+s=result;
+console.log(result);
+}
+</script>
+</head>
+
+<body>
+</body>
+</html>

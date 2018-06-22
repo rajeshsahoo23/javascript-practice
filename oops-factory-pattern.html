@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Function</title>
+<script>
+function createPerson(name,age,email,phone){
+	var obj1= new Object();
+	obj1.name=name;
+	obj1.age=age;
+	obj1.email=email;
+	obj1.phone=phone;
+	obj1.program= function() {
+		alert(this.age);
+		alert(this.phone);
+		alert(this.email);
+		alert(this.name);
+	}
+	return obj1;
+}
+var person1=createPerson("Rajesh",27,"raju@gmail.com",9620975636);
+//person1.program();
+alert(person1.name);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

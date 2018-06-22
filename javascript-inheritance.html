@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Inheritance</title>
+<script>
+// Establish a parent class
+function Parentclass(){
+    this.parent_property1 = "Hola";
+    this.parentmethod1 = function parentmethod1(arg1){
+        return arg1+" Parent method 1 return data ...";
+    }
+}
+// Establish a child class
+function Childclass(){
+    this.child_property1 = "Adios";
+    this.childmethod1 = function childmethod1(arg1){
+        return arg1+" Child method 1 return data ...";
+    }
+}
+// Make the Childclass inherit all of the Parent class characteristics
+// by using the prototype property, explained in depth here: youtube.com/watch?v=EBoUT2eBlT4
+Childclass.prototype = new Parentclass();
+// Create a new instance of Childclass
+var instance1 = new Childclass();
+// Check to see if instance1 is an instance of both objects
+alert( instance1 instanceof Parentclass );
+alert( instance1 instanceof Childclass );
+// Access the instance methods and properties
+alert( instance1.parentmethod1("RESULT: ") );
+alert( instance1.childmethod1("RESULT: ") );
+alert( instance1.parent_property1 );
+alert( instance1.child_property1 );
+// Override parentmethod1 in the Childclass
+Childclass.prototype.parentmethod1 = function parentmethod1(arg1){
+    return arg1+" I have overridden Parent method 1";
+}
+alert( instance1.parentmethod1("RESULT: ") );
+</script>
+</head>
+
+<body>
+</body>
+</html>

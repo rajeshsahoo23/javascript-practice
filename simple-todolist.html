@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<title>Todo List in JavaScript</title>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body {
+  margin: 0;
+  padding: 0px;
+}
+ul{
+padding:0px;
+margin:0px;
+}
+li {
+width:300px;
+position:relative;
+background:#ccc;
+padding:5px 10px;
+margin:5px 0px;
+list-style:none;
+}
+li span {
+position:absolute;
+right:10px;
+}
+</style>
+</head>
+<body>
+
+<div id="myDIV" class="container form-inline">
+  <h2>My To Do List</h2>
+  <div class="form-group">
+  <input class="form-control" type="text" id="myInput" placeholder="Enter Title">
+  </div>
+  <button class="btn btn-primary" onclick="newElement();">Add New</button>
+</div>
+<div class="container">
+<ul id="list">
+  <li>Going To School</li>
+  <li>Got New Bike</li>
+  <li>Buy eggs</li>
+</ul>
+</div>
+<script>
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li"); // Create New Element list
+  var inputValue = document.getElementById("myInput").value; // Add this Value from Input
+  var t = document.createTextNode(inputValue);// create text value
+  li.appendChild(t);// create list with text appendChild use for creating child text inside parent
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("list").appendChild(li);
+  }
+  // Create a "close" button when Li is created
+   document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+  }
+  }
+  }
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";// assign a class in span
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);// create a span with class 
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

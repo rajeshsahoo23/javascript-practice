@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Template Array</title>
+</head>
+<body>
+<p id="list"></p>
+<script type="text/javascript">
+var i, txt, nlength;
+var name= ["Rajesh", "Raju", "Ramesh", "Roji", "Pintu"];
+document.write("Names are: "+ name);
+nlength = name.length;
+document.write(nlength);
+txt="<ul>";
+for(i=0;i < nlength;i++){
+	txt += "<li>" + name[i] + "</li>";
+}
+txt+="</ul>";
+document.getElementById("list").innerHTML = txt;
+</script>
+</body>
+</html>

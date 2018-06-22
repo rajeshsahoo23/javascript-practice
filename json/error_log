@@ -1,0 +1,9 @@
+[10-Jan-2018 18:42:23 Etc/GMT] PHP Warning:  Division by zero in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 5
+[10-Jan-2018 18:42:28 Etc/GMT] PHP Warning:  Division by zero in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 5
+[10-Jan-2018 18:53:10 Etc/GMT] PHP Notice:  Undefined index: hgt in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 2
+[10-Jan-2018 18:53:10 Etc/GMT] PHP Notice:  Undefined index: wgt in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 3
+[10-Jan-2018 18:53:10 Etc/GMT] PHP Warning:  Division by zero in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 5
+[10-Jan-2018 19:01:34 Etc/GMT] PHP Warning:  Division by zero in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 5
+[10-Jan-2018 19:05:11 Etc/GMT] PHP Warning:  Division by zero in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 5
+[10-Jan-2018 19:05:13 Etc/GMT] PHP Warning:  Division by zero in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 5
+[10-Jan-2018 19:05:14 Etc/GMT] PHP Warning:  Division by zero in /home/rajeshku/public_html/javascript-practice/json/bmi-calc.php on line 5

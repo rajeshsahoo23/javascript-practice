@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Function with Return Type function</title>
+</head>
+
+<body>
+<script>
+var jobprofile= function(post){
+	if(post==="Developer"){
+		return function(name){
+			console.log("What you mean by UI Developer " + name + " ? ");
+		}
+		
+	} else if (post==="Desiginer"){
+		return function(name){ 
+			console.log("What you mean by UI Designer " + name +" ? ");
+		}
+		
+	}
+	else {
+		return function(name){
+			console.log("What are doing job " + name +" ? ");
+		}
+	}
+}
+
+var developerQuestion = jobprofile("Developer");
+	developerQuestion("Rajesh");
+	developerQuestion("Shankar");
+	developerQuestion("Pawan");
+	var designerQuestion = jobprofile("Desiginer");
+	designerQuestion("Ramesh");
+	designerQuestion("Ramukaka");
+	designerQuestion("Susmita");
+	designerQuestion("Rukaya");
+	var question = jobprofile()("Batun");
+</script>
+</body>
+</html>

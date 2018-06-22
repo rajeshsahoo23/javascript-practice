@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object to string</title>
+<script>
+var objectData = new XMLHttpRequest();
+    var url = 'http://localhost/jquery-practice/json/people.json';
+    objectData.open('GET', url, false); // false syncronext data type
+    objectData.send(); // complete sending request
+    if(objectData.readyState == 4 && objectData.status == 200){
+        var objData = objectData.responseText;
+        var objctDatalist = JSON.parse(objData);
+        document.writeln("Person Name " + objctDatalist.person[0]["firstName"] + "   " +  objctDatalist.person[0]["lastName"] + "<br>" );
+        document.writeln("Person Degination " + objctDatalist.person[0]["job"] +  "<br>" );
+    }
+</script>
+</head>
+
+<body>
+</body>
+</html>

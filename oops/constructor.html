@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Object Oriented Program</title>
+<script>
+var person= function () { // constructor
+this.name="Rajesh";
+this.age=27;
+this.email="rajesh@gmail.com";
+this.getw= function(){// A function is used in object property is called object methords
+	return this.name+" is "+ this.age+" years old and He had "+ this.email;
+}
+}
+var raju =new person; // instances
+console.log(raju);
+console.log(raju.getw());
+var rajesh = new person;
+console.log(rajesh);
+console.log(rajesh.getw());
+</script>
+</head>
+
+<body>
+</body>
+</html>

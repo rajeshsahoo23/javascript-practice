@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Class</title>
+<script>
+function exampleClass(){ // creating a Class
+    this.property1 = 5;
+    this.property2 = "World";
+    this.method1 = function(arg1){ // the methods
+	return arg1+" "+this.property2;
+    }
+}
+
+var instance1 = new exampleClass();
+var instance2 = new exampleClass();
+
+alert(instance1.method1("Hello"));
+
+instance1.property1 = 10;
+
+alert(instance1.property1);
+alert(instance2.property1);
+</script>
+<script>
+// Prototype method class
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  
+  get area() {
+    return this.calcArea();
+  }
+
+  calcArea() {
+    return this.height * this.width;
+  }
+}
+
+const square = new Rectangle(10, 10);
+
+alert(square.area);
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Name Spliting Color</title>
+<style>
+.color1 {
+color:red;
+}
+.color2 {
+color:blue;
+}
+</style>
+<script>
+var string ="Rajesh Kumar Sahoo";
+var chars= string.split(""); // "" is one spliting only " " is 3 spliting only
+var result ='';
+for( var i=0; i<chars.length; i++){
+ if(i%2 == 0){
+ result += "<span class='color1'>"+chars[i]+"</span>";
+ }
+ else {
+ result += "<span class='color2'>"+chars[i]+"</span>";
+ }
+}
+document.write("<h1>"+result+"</h1>");
+document.write("<h1>"+chars+"</h1>");
+</script>
+</head>
+
+<body>
+</body>
+</html>

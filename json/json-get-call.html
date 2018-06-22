@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>xml json call</title>
+	<script>
+		var jsonHttp = new XMLHttpRequest();  // creating http request
+		var url = "http://localhost/Jquery-practice/json/people.json";
+		jsonHttp.open("GET", url, false); // This is the request of link by methord get... false means syncronext or not sencronext
+		jsonHttp.send(); // to complete request
+		 if( jsonHttp.readyState==4 && jsonHttp.status==200){ // request will complete is its readyState == 4 and status be 200
+			 var result = jsonHttp.responseText;
+			 var res= JSON.parse(result);
+			 console.log(result);
+			 document.write(res["person"][0]["firstName"] + " " + res["person"][0]["lastName"]);
+			 
+		 }
+
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

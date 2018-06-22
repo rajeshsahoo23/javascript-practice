@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Creation of Table</title>
+
+</head>
+
+<body>
+<div id="container">
+
+</div>
+<script>
+var content = document.getElementById('container');
+var table='<table border="1">';
+for(var row=0; row<10;row++){
+table+="<tr>";
+for(var col=0; col<3;col++){
+table+='<td> Column='
++ (col+1)+
+'</td>';
+}
+table+="</tr>";
+}
+table+='</table>';
+
+content.innerHTML = table;
+</script>
+</body>
+</html>

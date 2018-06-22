@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript Attribute Template</title>
+<style>
+div {
+	box-sizing: border-box;
+}
+</style>
+</head>
+
+<body>
+<div id="mainContnr">
+  <div id="header">Header</div>
+  <div id="mainbody">
+    <h1>Welcome to Chrest Technology</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit tincidunt congue. Integer libero tortor, eleifend sit amet fringilla ut, elementum ut nisl. Mauris tristique velit at nisl placerat maximus. Curabitur non venenatis tortor, quis consectetur sapien. Aenean sed nibh at diam tristique ultricies non sed eros. Donec quis urna ac lectus lacinia auctor id id augue. Morbi volutpat nisl quis risus volutpat lobortis. Donec semper neque at augue fermentum vulputate. Suspendisse molestie, sapien et tincidunt congue, quam orci vulputate ligula, ut mattis lorem erat eget enim. Proin velit eros, tincidunt id elementum ut, eleifend sagittis diam. Sed cursus convallis blandit. Quisque mattis auctor tincidunt. </p>
+  </div>
+  <div id="sidebar">
+    <h2>Testimonials</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit tincidunt congue. Integer libero tortor, eleifend sit amet fringilla ut, elementum ut nisl.</p>
+    <p>Mauris tristique velit at nisl placerat maximus. Curabitur non venenatis tortor, quis consectetur sapien. Aenean sed nibh at diam tristique ultricies non sed eros.</p>
+    <p>Donec quis urna ac lectus lacinia auctor id id augue. Morbi volutpat nisl quis risus volutpat lobortis. Donec semper neque at augue fermentum vulputate. Suspendisse molestie, sapien et tincidunt congue, quam orci vulputate ligula, ut mattis lorem erat eget enim.</p>
+  </div>
+  <div id="footer" style="">Footer</div>
+</div>
+<script type="text/javascript">
+	var winHeight = window.innerHeight;
+	var mainContbgcolor = '#ffc';
+	var A = (winHeight * 15) / 100;
+	var Abgcolor = 'green';
+	var B = (winHeight * 75) / 100;
+	var Bbgcolor = '#dedede';
+	var C = (winHeight * 75) / 100;
+	var Cbgcolor = '#dedede';
+	var D = (winHeight * 10) / 100;
+	var Dbgcolor = '#000000';
+
+	document.getElementById("mainContnr").setAttribute("style", "height:" + winHeight + "px" + ";" + "padding:20px;" + "background-color:" + mainContbgcolor + ";" + "font-family: Arial, sans-serif;");
+	document.getElementById("header").setAttribute("style", "height:" + A + "px" + ";" + "padding:15px;" + "background-color:" + Abgcolor + ";" + "text-align:center;  color:#ffffff; ");
+	document.getElementById("mainbody").setAttribute("style", "height:" + B + "px" + ";" + "padding:15px;" + "background-color:" + Bbgcolor + ";" + "width:70%; float:left; " );
+	document.getElementById("sidebar").setAttribute("style", "height:" + C + "px" + ";" + "padding:15px;" + "background-color:" + Cbgcolor + ";" + "width:30%; float:left; border-left:1px solid #666; " );
+	document.getElementById("footer").setAttribute("style", "height:" + D + "px" + ";" + "padding:15px;" + "background-color:" + Dbgcolor + ";" + "float:left; width: 100%; color:#ffffff; text-align:center;");
+	
+</script>
+</body>
+</html>

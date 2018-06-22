@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Function Arguments</title>
+<script>
+function arguments(){   // with arguments to show alert lot of times, if arguments(argument,argument2) its will work
+for(var i=0;i<arguments.length;i++){
+arguments[0]="Puppy"; // reserved string instead of Rajesh
+alert(arguments[i]);
+} 
+}
+arguments("Rajesh", "Hello","World",12345,true);
+function add(){
+var result = 0;
+for(var i=0;i<add.length;i++){
+result += add[i];
+}
+return result;
+}
+var x=add(10, 40, 67, 90, 789);
+alert(x);
+</script>
+</head>
+
+<body>
+<p>Function Arguments with alert box</p>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Currency Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style rel="stylesheet">
+  .jumbotron {
+  margin-top:100px;
+  }
+  </style>
+  <script>
+  function convertCurrency() {
+  // alert("Hello");
+  var from1 = document.getElementById("from1").value;
+  var to = document.getElementById("to").value;
+  var httpRequest= new XMLHttpRequest(); // Make a new XML HTTP Request 
+  var url = "http://api.fixer.io/latest?symbols=" + from1 + "," + to; // Url rquired
+  httpRequest.open("GET", url, true); // get process with link with syncronext true
+   httpRequest.send(); // request sending process end
+   httpRequest.onreadystatechange = function(){  // check the ready state and status
+   if (httpRequest.readyState == 4 && httpRequest.status == 200)
+         {
+ var result = httpRequest.responseText; // response as text
+ console.log(result);
+ var resultData=JSON.parse(result); // data parse or retrive data process
+ var oneUnit = resultData.rates[to]/resultData.rates[from1];  //getting for one unit through json
+ var amountData = document.getElementById("fromAmount").value; // Getting from amount input
+ document.getElementById("toAmount").value = (oneUnit*amountData).toFixed(2); // for data display in to Amount
+ }
+ }
+ }
+  </script>
+</head>
+<body onload="convertCurrency()">
+
+<div class="container">
+<div class="jumbotron">
+  <h2 class="text-center">Currency Converter</h2>
+  <form	>
+    <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="fromAmount" value="1" onkeyup="convertCurrency()">
+    </div>
+   <div class="form-group col-sm-6">
+        <select  class="form-control" id="from1" onchange="convertCurrency()">
+		<option value="AUD">Australian Dollar (AUD)</option>
+                 <option value="BGN">Bulgarian Lev (BGN)</option>
+                 <option value="CAD">Canadian Dollar (CAD)</option>
+                 <option value="CHF">Swiss Franc (CHF)</option>
+                 <option value="DKK">Danish Krone (DKK)</option>
+                 <option value="GBP">Pound Sterling (GBP)</option> 
+                 <option value="ILS">Israeli New Shekel (ILS)</option>
+                 <option value="INR">Indian Rupee (INR)</option>
+                 <option value="JPY">Japanese Yen (JPY)</option>
+                 <option value="PHP">Philippine Peso (PHP)</option>
+                 <option value="RUB">Russian Ruble (RUB)</option>
+                 <option value="USD" selected>US Dollar (USD)</option>
+		</select>
+    </div>
+    <div class="form-group col-sm-6">
+        <input type="text" class="form-control" id="toAmount" disabled>
+    </div>
+   <div class="form-group col-sm-6">
+        <select  class="form-control" id="to" onchange="convertCurrency()">
+		<option value="AUD">Australian Dollar (AUD)</option>
+                 <option value="BGN">Bulgarian Lev (BGN)</option>
+                 <option value="CAD">Canadian Dollar (CAD)</option>
+                 <option value="CHF">Swiss Franc (CHF)</option>
+                 <option value="DKK">Danish Krone (DKK)</option>
+                 <option value="GBP">Pound Sterling (GBP)</option> 
+                 <option value="ILS">Israeli New Shekel (ILS)</option>
+                 <option value="INR" selected>Indian Rupee (INR)</option>
+                 <option value="JPY">Japanese Yen (JPY)</option>
+                 <option value="PHP">Philippine Peso (PHP)</option>
+                 <option value="RUB">Russian Ruble (RUB)</option>
+                 <option value="USD">US Dollar (USD)</option>
+		</select>
+    </div>
+  </form>
+  <hr>
+  <div class="clearfix"></div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

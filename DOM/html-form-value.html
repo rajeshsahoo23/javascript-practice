@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML Form Write Value</title>
+</head>
+<body>
+<form id="form1" action="#">
+  First name:
+  <input type="text" name="fname" value="Rajesh">
+  <br>
+  Middle name:
+  <input type="text" name="mname" value="Kumar">
+  <br>
+  Last name:
+  <input type="text" name="lname" value="Sahoo">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+<p>Click "Try it" to display the value of each element in the form.</p>
+
+<button onclick="myvalue()">Try it</button>
+<p id="para"></p>
+
+<script type="text/javascript">
+function myvalue(){
+	
+var x =document.forms["form1"];
+var text= "";
+var i;
+for (i = 0; i < x.length; i++) {
+	text += x.elements[i].value + "<br>";
+}
+document.getElementById("para").innerHTML = text;
+}
+</script>
+</body>
+</html>
